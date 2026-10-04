@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:name=".MyApplication"
@@ -28,6 +29,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".sample.activities.PrintSampleActivity" />
+
         <service
             android:name=".sample.services.DeepLinkService"
             android:exported="false"
@@ -35,6 +38,48 @@
 
         <activity
             android:name=".sample.activities.DeepLinkIntegrationActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/intent_host"
+                    android:scheme="@string/intent_scheme_same_activity" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".sample.activities.InstallmentsActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/intent_host"
+                    android:scheme="@string/intent_scheme_same_activity" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".sample.activities.PaymentCalculatorActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/intent_host"
+                    android:scheme="@string/intent_scheme_same_activity" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".sample.activities.PaymentValueActivity"
             android:exported="true"
             android:launchMode="singleTop">
 

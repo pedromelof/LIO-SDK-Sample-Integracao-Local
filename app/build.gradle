@@ -91,6 +91,8 @@ dependencies {
     implementation(files("libs/order-manager-2.7.2.aar"))
     implementation(files("libs/event-tracker-1.0.1.aar"))
 
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+
     // Dependências do Datadog que são necessárias para o funcionamento do SDK pois são dependencias transitivas do event-tracker
     // Não necessita dessa parte em seu aplicativo
     implementation 'com.datadoghq:dd-sdk-android-gradle-plugin:1.14.0'

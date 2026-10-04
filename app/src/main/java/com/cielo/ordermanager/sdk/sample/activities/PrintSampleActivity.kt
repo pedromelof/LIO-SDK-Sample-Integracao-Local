@@ -56,7 +56,7 @@ class PrintSampleActivity : AppCompatActivity() {
     }
 
     private fun printImage() {
-        val bitmap: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.cielo)
+        val bitmap: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.nfce)
         printerManager.printImage(bitmap, alignCenter, printerListener)
         Timber.tag("printerImage").w(printerListener.toString())
     }

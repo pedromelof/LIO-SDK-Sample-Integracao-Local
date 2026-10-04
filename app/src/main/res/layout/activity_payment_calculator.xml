@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_calc_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="896"
+        android:textSize="48sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/grid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_calc_display">
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btnClear"
+            android:layout_columnWeight="6"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnPercent"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="2"
+            android:text="÷" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/grid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@+id/grid1"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn7"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="7" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn8"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="8" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn9"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="×" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn4"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="4" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn5"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="5" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn6"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="-" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn1"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="1" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn2"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="2" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn3"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="+" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btn0"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="0" />
+
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:id="@+id/btnDot"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="," />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="⌫" />
+        <Button
+            style="@style/PrimaryActionButton"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="=" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_pagamento"
+        style="@style/PrimaryActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Pagamento"
+        app:layout_constraintTop_toBottomOf="@+id/grid2"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
